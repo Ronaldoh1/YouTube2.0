@@ -42,17 +42,14 @@ class VideoCell: UICollectionViewCell {
         let textView = UITextView()
         textView.backgroundColor = .blue
         textView.translatesAutoresizingMaskIntoConstraints = false
-
         return textView
     }()
-
 
     override init(frame: CGRect) {
         super.init(frame: frame)
 
         setupViews()
     }
-
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -91,7 +88,6 @@ class VideoCell: UICollectionViewCell {
         subtitleTextView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8).isActive = true
         subtitleTextView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 8).isActive = true
         subtitleTextView.heightAnchor.constraint(equalToConstant: 20).isActive = true
-
     }
     
 }

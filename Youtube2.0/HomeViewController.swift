@@ -17,8 +17,6 @@ class HomeViewController: UICollectionViewController {
 
         collectionView?.register(VideoCell.self, forCellWithReuseIdentifier: "home")
     }
-
-
 }
 
 extension HomeViewController {
