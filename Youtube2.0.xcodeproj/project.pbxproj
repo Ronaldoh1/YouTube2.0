@@ -81,7 +81,6 @@
 				F267A7961E3B92D000AD3A51 /* Controller */,
 				F267A7951E3B92CB00AD3A51 /* View */,
 				F267A7751E3B8A1E00AD3A51 /* AppDelegate.swift */,
-				F267A7771E3B8A1E00AD3A51 /* HomeViewController.swift */,
 				F267A77C1E3B8A1E00AD3A51 /* Assets.xcassets */,
 				F267A77E1E3B8A1E00AD3A51 /* LaunchScreen.storyboard */,
 				F267A7811E3B8A1E00AD3A51 /* Info.plist */,
@@ -109,6 +108,7 @@
 		F267A7961E3B92D000AD3A51 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F267A7771E3B8A1E00AD3A51 /* HomeViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -424,6 +424,7 @@
 				F267A7911E3B8A1F00AD3A51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F267A7921E3B8A1F00AD3A51 /* Build configuration list for PBXNativeTarget "Youtube2.0Tests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +433,7 @@
 				F267A7941E3B8A1F00AD3A51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

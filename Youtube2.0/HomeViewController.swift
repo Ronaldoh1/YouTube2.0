@@ -38,6 +38,11 @@ extension HomeViewController {
         return cell
     }
 
+    // Remove line spacing
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+
 }
 
 extension HomeViewController : UICollectionViewDelegateFlowLayout {
