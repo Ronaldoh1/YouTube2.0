@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F20101FD1E41363200E412AE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20101FC1E41363200E412AE /* UIColor+Extension.swift */; };
+		F20101FF1E413BF600E412AE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20101FE1E413BF600E412AE /* UIView+Extension.swift */; };
 		F267A7761E3B8A1E00AD3A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267A7751E3B8A1E00AD3A51 /* AppDelegate.swift */; };
 		F267A7781E3B8A1E00AD3A51 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267A7771E3B8A1E00AD3A51 /* HomeViewController.swift */; };
 		F267A77D1E3B8A1E00AD3A51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F267A77C1E3B8A1E00AD3A51 /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F20101FC1E41363200E412AE /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		F20101FE1E413BF600E412AE /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		F267A7721E3B8A1E00AD3A51 /* Youtube2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Youtube2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F267A7751E3B8A1E00AD3A51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F267A7771E3B8A1E00AD3A51 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F20101FB1E41361B00E412AE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F20101FC1E41363200E412AE /* UIColor+Extension.swift */,
+				F20101FE1E413BF600E412AE /* UIView+Extension.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		F267A7691E3B8A1C00AD3A51 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +90,7 @@
 		F267A7741E3B8A1E00AD3A51 /* Youtube2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				F20101FB1E41361B00E412AE /* Helpers */,
 				F267A7971E3B96B100AD3A51 /* Model */,
 				F267A7961E3B92D000AD3A51 /* Controller */,
 				F267A7951E3B92CB00AD3A51 /* View */,
@@ -225,6 +239,8 @@
 				F267A7781E3B8A1E00AD3A51 /* HomeViewController.swift in Sources */,
 				F267A7761E3B8A1E00AD3A51 /* AppDelegate.swift in Sources */,
 				F267A7991E3B97F700AD3A51 /* VideoCell.swift in Sources */,
+				F20101FF1E413BF600E412AE /* UIView+Extension.swift in Sources */,
+				F20101FD1E41363200E412AE /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,7 +25,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window?.rootViewController = UINavigationController(rootViewController: rootController)
 
-        
+        //Navigation Bar
+        UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 230, green: 32, blue: 31)
+        //Status Bar 
+
+        UIApplication.shared.statusBarStyle = .lightContent
+        let statusBarBackgroundView = UIView()
+        statusBarBackgroundView.backgroundColor = .blue
+
+        window?.addSubview(statusBarBackgroundView)
+
+        window?.addConstraintsWithFormat("H:|[v0]|", views: statusBarBackgroundView)
+        window.addConstraintsWithFormat("V:|[v0(20)]|", views: statusBarBackgroundView)
+
         return true
     }
 

@@ -15,7 +15,17 @@ class HomeViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        collectionView?.backgroundColor = .white
         collectionView?.register(VideoCell.self, forCellWithReuseIdentifier: "home")
+
+        navigationController?.navigationBar.isTranslucent = false
+
+        let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 32)
+        let titleLabel = UILabel(frame: frame)
+        titleLabel.text = "Home"
+        titleLabel.textColor = .white
+        titleLabel.font = UIFont.systemFont(ofSize: 20)
+        navigationItem.titleView = titleLabel
     }
 }
 
@@ -31,7 +41,6 @@ extension HomeViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: homeCellID, for: indexPath)
-        cell.backgroundColor = .red
 
         return cell
     }
@@ -46,7 +55,10 @@ extension HomeViewController {
 extension HomeViewController : UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 200)
+
+        let height = (view.frame.width - 16 - 16) * 9 / 16
+
+        return CGSize(width: view.frame.width, height: height + 16 + 68)
     }
 
 }

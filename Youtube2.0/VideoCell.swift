@@ -10,7 +10,7 @@ import UIKit
 
 class VideoCell: UICollectionViewCell {
 
-    let thumbnailImageView: UIImageView = {
+    fileprivate let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .yellow
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -18,31 +18,35 @@ class VideoCell: UICollectionViewCell {
         return imageView
     }()
 
-    let separatorView: UIView = {
+    fileprivate let separatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = .black
+        view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
-    let userProfileImageView: UIImageView = {
+    fileprivate let userProfileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .green
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = #imageLiteral(resourceName: "taylor")
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = 22
         return imageView
     }()
 
-    let titleLabel: UILabel = {
+    fileprivate let titleLabel: UILabel = {
         let label = UILabel()
-        label.backgroundColor = .purple
+        label.text = "Taylor Swift - Blank Space"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
-    let subtitleTextView: UITextView = {
+    fileprivate let subtitleTextView: UITextView = {
         let textView = UITextView()
-        textView.backgroundColor = .blue
+        textView.text = "TaylorSwiftVEVO - 1,602,684,607 • 2 years ago"
         textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.textContainerInset = UIEdgeInsetsMake(0, -4, 0, 0)
         return textView
     }()
 
@@ -86,9 +90,9 @@ class VideoCell: UICollectionViewCell {
         addSubview(subtitleTextView)
 
         subtitleTextView.leftAnchor.constraint(equalTo: userProfileImageView.rightAnchor, constant: 8).isActive = true
-        subtitleTextView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8).isActive = true
+        subtitleTextView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4).isActive = true
         subtitleTextView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 8).isActive = true
-        subtitleTextView.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        subtitleTextView.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
     
 }
