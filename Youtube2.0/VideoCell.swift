@@ -14,6 +14,7 @@ class VideoCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.backgroundColor = .yellow
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = #imageLiteral(resourceName: "blankspace")
         return imageView
     }()
 
