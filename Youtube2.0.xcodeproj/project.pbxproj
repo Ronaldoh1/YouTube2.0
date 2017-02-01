@@ -10,6 +10,8 @@
 		F20101FD1E41363200E412AE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20101FC1E41363200E412AE /* UIColor+Extension.swift */; };
 		F20101FF1E413BF600E412AE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20101FE1E413BF600E412AE /* UIView+Extension.swift */; };
 		F2027F7E1E41D85C00255A81 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2027F7D1E41D85C00255A81 /* MenuBar.swift */; };
+		F2027F801E421C5000255A81 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2027F7F1E421C5000255A81 /* MenuCell.swift */; };
+		F2027F821E421CA600255A81 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2027F811E421CA600255A81 /* BaseCell.swift */; };
 		F267A7761E3B8A1E00AD3A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267A7751E3B8A1E00AD3A51 /* AppDelegate.swift */; };
 		F267A7781E3B8A1E00AD3A51 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267A7771E3B8A1E00AD3A51 /* HomeViewController.swift */; };
 		F267A77D1E3B8A1E00AD3A51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F267A77C1E3B8A1E00AD3A51 /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 		F20101FC1E41363200E412AE /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		F20101FE1E413BF600E412AE /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		F2027F7D1E41D85C00255A81 /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		F2027F7F1E421C5000255A81 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		F2027F811E421CA600255A81 /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		F267A7721E3B8A1E00AD3A51 /* Youtube2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Youtube2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F267A7751E3B8A1E00AD3A51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F267A7771E3B8A1E00AD3A51 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 			children = (
 				F267A7981E3B97F700AD3A51 /* VideoCell.swift */,
 				F2027F7D1E41D85C00255A81 /* MenuBar.swift */,
+				F2027F7F1E421C5000255A81 /* MenuCell.swift */,
+				F2027F811E421CA600255A81 /* BaseCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -239,9 +245,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2027F801E421C5000255A81 /* MenuCell.swift in Sources */,
 				F267A7781E3B8A1E00AD3A51 /* HomeViewController.swift in Sources */,
 				F267A7761E3B8A1E00AD3A51 /* AppDelegate.swift in Sources */,
 				F2027F7E1E41D85C00255A81 /* MenuBar.swift in Sources */,
+				F2027F821E421CA600255A81 /* BaseCell.swift in Sources */,
 				F267A7991E3B97F700AD3A51 /* VideoCell.swift in Sources */,
 				F20101FF1E413BF600E412AE /* UIView+Extension.swift in Sources */,
 				F20101FD1E41363200E412AE /* UIColor+Extension.swift in Sources */,

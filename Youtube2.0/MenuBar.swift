@@ -23,7 +23,7 @@ class MenuBar: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataS
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        collectionView.register(UICollectionViewCell.self , forCellWithReuseIdentifier: cellID)
+        collectionView.register(MenuCell.self , forCellWithReuseIdentifier: cellID)
         setupCollectionView()
     }
 
@@ -52,4 +52,13 @@ class MenuBar: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataS
         return cell
     }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: frame.width / 4, height: frame.height)
+    }
+
+    //Remove spacing between cells
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
 }

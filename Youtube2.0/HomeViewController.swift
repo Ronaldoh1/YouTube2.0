@@ -14,6 +14,7 @@ class HomeViewController: UICollectionViewController {
 
      let menuBar: MenuBar = {
         let mb = MenuBar()
+        mb.translatesAutoresizingMaskIntoConstraints = false
         return mb
     }()
 
@@ -32,16 +33,25 @@ class HomeViewController: UICollectionViewController {
         titleLabel.font = UIFont.systemFont(ofSize: 20)
         navigationItem.titleView = titleLabel
 
+        collectionView?.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+
+        collectionView?.scrollIndicatorInsets = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+
         setupMenuBar()
+
     }
 
 
     private func setupMenuBar() {
      view.addSubview(menuBar)
-     view.addConstraintsWithFormat("H:|[v0]|", views: menuBar)
-     view.addConstraintsWithFormat("V:|[v0(50)]", views: menuBar)
-
+     menuBar.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+     menuBar.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+     menuBar.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+     menuBar.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
     }
+
+
 }
 
 extension HomeViewController {
