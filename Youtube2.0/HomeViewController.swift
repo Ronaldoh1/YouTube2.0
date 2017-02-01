@@ -12,6 +12,11 @@ class HomeViewController: UICollectionViewController {
 
     fileprivate let  homeCellID = "home"
 
+     let menuBar: MenuBar = {
+        let mb = MenuBar()
+        return mb
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +31,16 @@ class HomeViewController: UICollectionViewController {
         titleLabel.textColor = .white
         titleLabel.font = UIFont.systemFont(ofSize: 20)
         navigationItem.titleView = titleLabel
+
+        setupMenuBar()
+    }
+
+
+    private func setupMenuBar() {
+     view.addSubview(menuBar)
+     view.addConstraintsWithFormat("H:|[v0]|", views: menuBar)
+     view.addConstraintsWithFormat("V:|[v0(50)]", views: menuBar)
+
     }
 }
 

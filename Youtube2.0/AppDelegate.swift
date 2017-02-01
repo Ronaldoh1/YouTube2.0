@@ -27,6 +27,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //Navigation Bar
         UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 230, green: 32, blue: 31)
+
+        //Get rid of bar underneath bar bar 
+
+        UINavigationBar.appearance().shadowImage = UIImage()
+
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         //Status Bar 
 
         UIApplication.shared.statusBarStyle = .lightContent
