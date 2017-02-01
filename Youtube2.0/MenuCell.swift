@@ -10,22 +10,33 @@ import UIKit
 
 class MenuCell: BaseCell {
 
-    let imageView: UIImageView = {
+    override var isHighlighted: Bool {
+        didSet{
+            menuButtonImage.tintColor = isHighlighted ? .white : UIColor.rgb(red: 91, green: 14, blue: 13)
+        }
+    }
+
+    override var isSelected: Bool {
+        didSet {
+            menuButtonImage.tintColor = isSelected ? .white : UIColor.rgb(red: 91, green: 14, blue: 13)
+        }
+    }
+
+    let menuButtonImage: UIImageView = {
         let iv = UIImageView()
         iv.translatesAutoresizingMaskIntoConstraints = false
-        iv.image = #imageLiteral(resourceName: "home")
+        iv.image = #imageLiteral(resourceName: "home").withRenderingMode(.alwaysTemplate)
+        iv.tintColor = UIColor.rgb(red: 91, green: 14, blue: 13)
         return iv
     }()
 
     override func setupViews() {
-
-        backgroundColor = .yellow
-
-        addSubview(imageView)
-        imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        imageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 28).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: 28).isActive = true
+        super.setupViews()
+        addSubview(menuButtonImage)
+        menuButtonImage.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        menuButtonImage.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        menuButtonImage.heightAnchor.constraint(equalToConstant: 28).isActive = true
+        menuButtonImage.widthAnchor.constraint(equalToConstant: 28).isActive = true
     }
 
 }

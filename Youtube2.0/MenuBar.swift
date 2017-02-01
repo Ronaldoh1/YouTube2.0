@@ -21,9 +21,13 @@ class MenuBar: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataS
 
     let cellID = "videoCell"
 
+    let imageNames = [#imageLiteral(resourceName: "home"), #imageLiteral(resourceName: "trending"), #imageLiteral(resourceName: "subscriptions"), #imageLiteral(resourceName: "account")]
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         collectionView.register(MenuCell.self , forCellWithReuseIdentifier: cellID)
+        let selectedIndexPath = IndexPath(item: 0, section: 0)
+        collectionView.selectItem(at: selectedIndexPath, animated: true, scrollPosition: .top)
         setupCollectionView()
     }
 
@@ -47,8 +51,9 @@ class MenuBar: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataS
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
-        cell.backgroundColor = .green
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! MenuCell
+
+        cell.menuButtonImage.image = imageNames[indexPath.item].withRenderingMode(.alwaysTemplate)
         return cell
     }
 
